@@ -15,12 +15,12 @@ public class DepartmentService {
     private DepartmentRepository departmentRepository;
 
     public Department saveDepartment(Department department) {
-    	System.out.println("Inside saveDepartment of DepartmentService");
+    	log.info("Inside saveDepartment of DepartmentService");
         return departmentRepository.save(department);
     }
 
     public Department findDepartmentById(Long departmentId) {
-    	System.out.println("Inside saveDepartment of DepartmentService");
+    	log.info("Inside saveDepartment of DepartmentService");
         return departmentRepository.findByDepartmentId(departmentId);
     }
 }
