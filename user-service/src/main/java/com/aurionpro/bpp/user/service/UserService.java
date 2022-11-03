@@ -21,12 +21,12 @@ public class UserService {
     private RestTemplate restTemplate;
 
     public User saveUser(User user) {
-    	System.out.println("Inside saveUser of UserService");
+    	log.info("Inside saveUser of UserService");
         return userRepository.save(user);
     }
 
     public ResponseTemplateVO getUserWithDepartment(Long userId) {
-    	System.out.println("Inside getUserWithDepartment of UserService");
+    	log.info("Inside getUserWithDepartment of UserService");
         ResponseTemplateVO vo = new ResponseTemplateVO();
         User user = userRepository.findByUserId(userId);
 
